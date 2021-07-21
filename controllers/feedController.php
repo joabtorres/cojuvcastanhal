@@ -6,30 +6,19 @@ class feedController extends controller {
         $dados = array();
         $crud = new crud_db();
         $dados = array();
-        $dados['categorias'] = $crud->read("SELECT * FROM categoria WHERE status = 1 ORDER BY nome ASC");
-        $dados['usuarios'] = $crud->read("SELECT * FROM usuario WHERE status = 1 ORDER BY nome ASC");
+        $dados['genero'] = 'feed';
         $arraySearch = array();
         $sql = "SELECT p.*, c.nome as categoria, u.nome FROM post AS p INNER JOIN categoria as c INNER JOIN usuario as u WHERE p.id_categoria=c.id AND  p.id_usuario=u.id AND p.status=1 AND p.genero='Feed'";
         $parametros = "";
         if (isset($_GET['nBuscarBT'])) {
-            $parametros = "?nCategoria=" . $_GET['nCategoria'] . "?nUsuario=" . $_GET['nUsuario'] . "?nTitulo=" . $_GET['nTitulo'] . "&nBuscarBT=BuscarBT";
-            //nTitulo
-            if (!empty($_GET['nCategoria'])) {
-                $sql = $sql . " AND id_categoria=:categoria ";
-                $arraySearch['categoria'] = addslashes($_GET['nCategoria']);
-            }
-            //nTitulo
-            if (!empty($_GET['nUsuario'])) {
-                $sql = $sql . " AND id_usuario=:id_usuario ";
-                $arraySearch['id_usuario'] = addslashes($_GET['nUsuario']);
-            }
+            $parametros ="?nTitulo=" . $_GET['nTitulo'] . "&nBuscarBT=BuscarBT";
             //nTitulo
             if (!empty($_GET['nTitulo'])) {
                 $sql = $sql . " AND titulo LIKE :titulo ";
                 $arraySearch['titulo'] = "%" . $_GET['nTitulo'] . "%";
             }
             //paginacao
-            $limite = 10;
+            $limite = 15;
             $total_registro = $crud->read($sql, $arraySearch);
             $total_registro = is_array($total_registro) ? count($total_registro) : 1;
             $paginas = $total_registro / $limite;
@@ -44,7 +33,7 @@ class feedController extends controller {
             $dados['posts'] = $crud->read($sql, $arraySearch);
         } else {
             //paginacao
-            $limite = 10;
+            $limite = 15;
             $total_registro = $crud->read($sql);
             $total_registro = is_array($total_registro) ? count($total_registro) : 1;
             $paginas = $total_registro / $limite;

@@ -1,13 +1,15 @@
 <div id="content">
-    <button type="button" id="sidebarCollapse" class="btn btn-warning navbar-btn">
-        <i class="glyphicon glyphicon-align-justify"></i>
-    </button>
-    <div id="content-title-head">
-        <h4 class="title"><?php echo (!empty($post['titulo'])) ? $post['titulo'] : '' ?></h4> 
+    <div class="menu-principal">
+        <button type="button" id="sidebarCollapse" class="btn btn-warning navbar-btn">
+            <i class="glyphicon glyphicon-align-justify"></i>
+        </button>
+        <div id="content-title-head">
+            <h4 class="title"><?php echo (!empty($post['titulo'])) ? $post['titulo'] : '' ?></h4> 
+        </div>
     </div>
     <div class="container-fluid">
         <div class="col-md-12">
-            <p><i class="fas fa-calendar-check text-orange"></i> <?php echo (!empty($post['data'])) ? $this->formatDataViewComplete($post['data']) : '' ?>  | <i class="fas fa-bookmark text-orange"></i> <?php echo (!empty($post['categoria'])) ? $post['categoria'] : '' ?>  | <span class="text-orange"><i class="fas fa-user-circle"></i></span> <?php echo (!empty($post['nome'])) ? $post['nome'] : '' ?>  </p>
+            <p style="font-size:0.8em"><i class="fas fa-calendar-check text-orange"></i> <?php echo (!empty($post['data'])) ? $this->formatDataViewComplete($post['data']) : '' ?>  | <i class="fas fa-bookmark text-orange"></i> <?php echo (!empty($post['categoria'])) ? $post['categoria'] : '' ?>  </p>
             <?php echo (!empty($post['texto'])) ? $post['texto'] : '' ?>  
             <?php
             if (isset($post['imagens']) && is_array($post['imagens'])) :
@@ -20,7 +22,8 @@
                 endforeach;
             endif;
             ?>
-
+            <hr/>
+            <div class="fb-comments" data-href="https://joabtorres.com.br/post/index/<?php echo (!empty($post['id'])) ? md5($post['id']) : '' ?>" data-width="100%" data-numposts="5"></div>
         </div>
     </div>
 </div>

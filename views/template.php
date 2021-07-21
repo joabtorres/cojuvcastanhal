@@ -18,7 +18,8 @@
     </head>
 
     <body>
-
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v11.0" nonce="5nGhID46"></script>
         <div class="wrapper">
             <!-- Sidebar Holder -->
             <nav id="sidebar">
@@ -33,11 +34,12 @@
                 <ul class="list-unstyled components">
                     <li><a href="<?php echo BASE_URL ?>/home"> <span class="text-orange"><i class="fas fa-home"></i></span> Inicial</a></li>
                     <li><a href="<?php echo BASE_URL ?>/quemsomos"><span class="text-orange"><i class="fas fa-users"></i></span> Quem Somos</a></li>
+                    <li><a href="<?php echo BASE_URL ?>/feed"><span class="text-orange"><i class="fas fa-rss"></i></span> Feeds</a></li>
+                    <li><a href="<?php echo BASE_URL ?>/foto"><span class="text-orange"><i class="far fa-images"></i></span> Fotos</a></li>
                     <li><a href="<?php echo BASE_URL ?>/video"><span class="text-orange"><i class="fas fa-play"></i></span> Vídeos</a></li>
-                    <li><a href="<?php echo BASE_URL ?>/feed"><span class="text-orange"><i class="fas fa-rss"></i></span> Feed</a></li>
-                    <li><a href="<?php echo BASE_URL ?>/fotos"><span class="text-orange"><i class="far fa-images"></i></span> Fotos</a></li>
-                    <li><a href="<?php echo BASE_URL ?>/podcast"><span class="text-orange"><i class="fas fa-podcast"></i></span> Podcast</a></li>
-                    <li><a href="<?php echo BASE_URL ?>/contato"><span class="text-orange"><i class="fas fa-envelope"></i></span> Contato</a></li>
+                    <li><a href="<?php echo BASE_URL ?>/podcast"><span class="text-orange"><i class="fas fa-podcast"></i></span> Podcasts</a></li>
+                    <li><a href="<?php echo BASE_URL ?>/agenda"><span class="text-orange"><i class="far fa-calendar-check"></i></span> Agenda</a></li>
+                    <li><a href="<?php echo BASE_URL ?>/contato"><span class="text-orange"><i class="fas fa-envelope"></i></span> Contato/Cadastro</a></li>
                     <li><a href="<?php echo BASE_URL ?>/social"><span class="text-orange"><i class="fas fa-icons"></i></span> Rede Sociais</a></li>
                 </ul>
 

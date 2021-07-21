@@ -9,7 +9,6 @@ hr{margin: 0}
 }
 .bg-white{background: #fff}
 form label{    font-weight: normal!important;}
-.panel-title{    font-size: 14px;}
 .text-indent{    text-indent: 40px;;}
 .panel textarea{    min-width: 100%;    max-width: 100%;}
 .margin-bottom-0{    margin-bottom: 0;}
@@ -20,13 +19,27 @@ form label{    font-weight: normal!important;}
 .text-white{    color: white}
 .text-orange{color: orange};
 html, body { margin:0; height: 100%;}
+.padding-0{padding: 0;}
 .padding-5{padding: 5px;}
 .padding-left-5{padding-left: 5px;}
 .padding-rigth-5{padding-right: 5px;}
+.input-group-addon, .input-group-addon .btn-xs{
+    background-color: orange;
+    color: white;
 
+}
+.form-control, .input-group-addon, .input-group-addon .btn-xs{
+    border: 2px solid orange;
+}
+.input-group-addon .btn-group-xs > .btn, .btn-xs{
+    padding: 4px 5px
+}
+.bg-orange{
+    background: orange;
+}
 body {
     font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+    background: #fff;
 }
 .panel-warning .panel-heading{
     color: #fff;
@@ -39,7 +52,7 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    color: black;
 }
 
 a, a:hover, a:focus {
@@ -232,4 +245,20 @@ a.article, a.article:hover {
     background-image: url("../imagens/fundo_principal.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
+}
+/* --------------------------------
+   Paginacao
+-----------------------------------*/
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover{
+    background-color: orange;
+    border-color: orange;
+}
+
+.pagination > li > a{
+    border-color: orange;
+    color: orange
+}
+.pagination > li > a:hover{
+    border-color: orange;
+    color: black
 }

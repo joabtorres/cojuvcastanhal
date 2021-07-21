@@ -8,8 +8,8 @@ require 'environment.php';
 $config = array();
 if (ENVIRONMENT == 'development') {
     //Raiz
-    define("BASE_URL", "http://localhost/codjuven");
-    define("BASE_URL_PAINEL", "http://localhost/codjuven/painel_codjuven");
+    define("BASE_URL", "http://localhost:8080/cojuvcastanhal");
+    define("BASE_URL_PAINEL", "http://localhost:8080/cojuvcastanhal/painel_cojuv");
     //Nome do banco
     $config['dbname'] = 'codjuven';
     //host

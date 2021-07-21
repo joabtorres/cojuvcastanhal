@@ -20,10 +20,6 @@ class homeController extends controller {
     public function index() {
         $view = "home";
         $dados = array();
-        $crud = new crud_db();
-        $sql = "SELECT p.*, c.nome as categoria, u.nome FROM post AS p INNER JOIN categoria as c INNER JOIN usuario as u WHERE p.id_categoria=c.id AND p.id_usuario=u.id AND p.status=1 ORDER BY p.id DESC LIMIT 0,3";
-        $dados['posts'] = $crud->read($sql);
-
         $this->loadTemplate($view, $dados);
     }
 
