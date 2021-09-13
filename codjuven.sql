@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29-Jun-2021 às 12:54
+-- Tempo de geração: 13-Set-2021 às 16:45
 -- Versão do servidor: 10.4.8-MariaDB
 -- versão do PHP: 7.3.11
 
@@ -65,7 +65,9 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`id`, `id_categoria`, `id_usuario`, `data`, `genero`, `titulo`, `previo`, `texto`, `imagem`, `status`) VALUES
-(1, 22, 1, '2021-06-15', 'Feed', 'Esporte nas escolas publicas de castanhal', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ', '<p><strong>What is Lorem Ipsum?</strong></p>\r\n<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Why do we use it?</strong></p>\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>', 'uploads/posts/post_1/520661fd357f6325e0068a1ad4ce08c6.jpg', 1);
+(1, 22, 1, '2021-06-15', 'feed', 'Esporte nas escolas publicas de castanhal', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ', '<p><strong>What is Lorem Ipsum?</strong></p>\r\n<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Why do we use it?</strong></p>\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>', 'uploads/posts/post_1/520661fd357f6325e0068a1ad4ce08c6.jpg', 1),
+(2, 22, 1, '2021-07-06', 'feed', 'tesasdsa', 'asdasdasd sadsa dsa da', '<p>asdas das das dsa</p>', 'uploads/posts/post_2/86a054e1efafb8f5c505a97eb6d170b8.jpeg', 1),
+(3, 22, 1, '2021-07-05', 'foto', 'Esporte nas escolas publicas de castanhal', 'What is Lorem Ipsum?\r\n\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a ty', '<p><strong>What is Lorem Ipsum?</strong></p>\r\n<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Why do we use it?</strong></p>\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>', 'uploads/posts/post_3/548acf48a0ee8390ead538c2885e82e9.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -85,7 +87,10 @@ CREATE TABLE `post_img` (
 
 INSERT INTO `post_img` (`id`, `id_post`, `imagem`) VALUES
 (104, 1, 'uploads/posts/post_1/normal_44934c7179b61ece3c15824b6d81d4b1.jpg'),
-(105, 1, 'uploads/posts/post_1/normal_8c16ee1bf4fd4eb3245efb35b0cb1ced.jpg');
+(105, 1, 'uploads/posts/post_1/normal_8c16ee1bf4fd4eb3245efb35b0cb1ced.jpg'),
+(106, 2, 'uploads/posts/post_2/normal_ec2cbebf61a34e39ce161d9adc74e68e.jpg'),
+(107, 3, 'uploads/posts/post_3/normal_b96da69477ecd96f8be0b1008e71c044.jpg'),
+(108, 3, 'uploads/posts/post_3/normal_dd777560b2479e68d76299dcfda7bc0b.jpg');
 
 -- --------------------------------------------------------
 
@@ -105,7 +110,10 @@ CREATE TABLE `post_img_min` (
 
 INSERT INTO `post_img_min` (`id`, `id_post`, `imagem`) VALUES
 (86, 1, 'uploads/posts/post_1/miniatura_7515b1d3b5a5943faf873fe27786e2b3.jpg'),
-(87, 1, 'uploads/posts/post_1/miniatura_327c10d1e32c81dd7971ba530d6a90b5.jpg');
+(87, 1, 'uploads/posts/post_1/miniatura_327c10d1e32c81dd7971ba530d6a90b5.jpg'),
+(88, 2, 'uploads/posts/post_2/miniatura_7851dd707d4225c1ee0d86deb5f459f1.jpg'),
+(89, 3, 'uploads/posts/post_3/miniatura_ab6e5f681f9a68b9e0b6b1f6ab5a4ea0.jpg'),
+(90, 3, 'uploads/posts/post_3/miniatura_ce659019bfe88ccd2e8383172bc1f76f.jpg');
 
 -- --------------------------------------------------------
 
@@ -217,13 +225,13 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT de tabela `post_img`
 --
 ALTER TABLE `post_img`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
 
 --
 -- AUTO_INCREMENT de tabela `post_img_min`
 --
 ALTER TABLE `post_img_min`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT de tabela `slide`
