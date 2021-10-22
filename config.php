@@ -8,10 +8,10 @@ require 'environment.php';
 $config = array();
 if (ENVIRONMENT == 'development') {
     //Raiz
-    define("BASE_URL", "http://localhost:8080/cojuvcastanhal");
-    define("BASE_URL_PAINEL", "http://localhost:8080/cojuvcastanhal/painel_cojuv");
+    define("BASE_URL", "http://localhost/cojuv");
+    define("BASE_URL_PAINEL", "http://localhost/cojuv/painel_cojuv");
     //Nome do banco
-    $config['dbname'] = 'codjuven';
+    $config['dbname'] = 'cojuv';
     //host
     $config['host'] = 'localhost';
     //usuario
@@ -22,13 +22,13 @@ if (ENVIRONMENT == 'development') {
 	//Raiz
     define("BASE_URL", "http://www.cavanis.edu.br");
     define("BASE_URL_PAINEL", "http://cavanis.edu.br/painel/");
-      //Nome do banco
-    $config['dbname'] = 'codjuven';
+	//Nome do banco
+    $config['dbname'] = 'cojuv';
     //host
-    $config['host'] = 'mysql.cavanis.edu.br';
+    $config['host'] = 'localhost';
     //usuario
-    $config['dbuser'] = 'cavanis1';
+    $config['dbuser'] = 'root';
     //senha
-    $config['dbpass'] = '+f#yNqTQq2)L';
+    $config['dbpass'] = '';
 }
 ?>
